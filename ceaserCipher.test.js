@@ -1,4 +1,4 @@
-const ceaserCipher = require('./ceaserCipher');
+import ceaserCipher from './ceaserCipher';
 
 test('ceaserCipher exists', () => {
   expect(ceaserCipher).toBeDefined();

@@ -1,4 +1,4 @@
-const calculator = require('./calculator');
+import calculator from './calculator';
 
 test('calculator exists', () => {
   expect(calculator).toBeDefined();

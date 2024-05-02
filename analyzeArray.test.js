@@ -1,4 +1,4 @@
-const analyzeArray = require("./analyzeArray");
+import analyzeArray from './analyzeArray';
 
 test("analyzeArray exists", () => {
   expect(analyzeArray).toBeDefined();

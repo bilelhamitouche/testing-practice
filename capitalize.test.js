@@ -1,5 +1,5 @@
 
-const capitalize = require('./capitalize');
+import capitalize from './capitalize';
 
 test('capitalize function exists', () => {
   expect(capitalize).toBeDefined();
