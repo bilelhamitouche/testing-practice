@@ -1,32 +1,16 @@
-const alphabet = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
+function shift(char, shift) {
+  return String.fromCharCode(char.charCodeAt(0) + (shift % 26));
+}
 
-function ceaserCipher(str, key) {}
+function ceaserCipher(str, key) {
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    result += shift(str[i], key);
+  }
+  return result;
+}
 
-export default ceaserCipher;
+//export default ceaserCipher;
+
+console.log(ceaserCipher("bilel0", 1));
+console.log(ceaserCipher("Bilel", 4));
