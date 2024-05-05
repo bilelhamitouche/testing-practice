@@ -11,4 +11,6 @@ test('testCases for ceaserCipher', () => {
   expect(ceaserCipher('yyy', -1)).toEqual('xxx');
   expect(ceaserCipher('Ed', -8)).toEqual('Wv');
   expect(ceaserCipher('Zy', 4)).toEqual('Dc');
+  expect(ceaserCipher('?', 4)).toEqual('?');
+  expect(ceaserCipher('.', 4)).toEqual('.');
 });

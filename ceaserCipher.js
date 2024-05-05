@@ -1,10 +1,12 @@
 function shift(char, shift) {
-  if (char === ' ') return char;
+  const punctuation = [' ', '.', ':', '!', ',', ';', '?'];
+  if (punctuation.includes(char)) return char;
   return String.fromCharCode(char.charCodeAt(0) + (shift % 26));
 }
 
 function upperShift(char, shift, upperCase = false) {
-  if (char === ' ') return char;
+  const punctuation = [' ', '.', ':', '!', ',', ';', '?'];
+  if (punctuation.includes(char)) return char;
   if (upperCase) {
     return String.fromCharCode(
       'A'.charCodeAt(0) +
@@ -20,7 +22,8 @@ function upperShift(char, shift, upperCase = false) {
 }
 
 function lowerShift(char, shift, upperCase = false) {
-  if (char === ' ') return char;
+  const punctuation = [' ', '.', ':', '!', ',', ';', '?'];
+  if (punctuation.includes(char)) return char;
   if (upperCase) {
     return String.fromCharCode(
       'Z'.charCodeAt(0) +
